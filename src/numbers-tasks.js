@@ -536,8 +536,10 @@ function getIntegerPartNumber(/* number */) {
  * 1, 2, 3       => 6
  * 0.1, 0.2, 0.3 => 0.6
  */
-function getSumOfNumbers(/* x1, x2, x3 */) {
-  throw new Error('Not implemented');
+function getSumOfNumbers(x1, x2, x3) {
+  const sum1 = x1 + x2;
+  const sum2 = Math.round((sum1 + x3) * 1e15) / 1e15;
+  return sum2;
 }
 
 /**
